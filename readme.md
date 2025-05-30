@@ -8,3 +8,6 @@ pip install langchain-openai
 pip install langchain-groq
 pip install google-search-results
 pip install groq
+
+
+model used - llama-3.3-70b-versatile

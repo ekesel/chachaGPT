@@ -4,7 +4,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from tools.ai_tool import run_gpt
 
-app = FastAPI()
+app = FastAPI(title="My ChachaGPT Service")
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")

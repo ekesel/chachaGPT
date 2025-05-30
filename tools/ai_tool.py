@@ -6,6 +6,7 @@ from langchain.agents.agent_types import AgentType
 from langchain.tools import Tool
 from ai_config import SERP_API_KEY, llm_picker
 from .prompts import SEARCH_PROMPT, CREATIVE_PROMPT, JOKE_PROMPT, COMBINED_PROMPT
+from .output_parser import SimpleOutputParser
 
 # 1. Pick the LLM
 llm = llm_picker("groq")
@@ -83,7 +84,8 @@ agent = initialize_agent(
     verbose=True,
     agent_kwargs={
         "prompt": system_template, 
-        "return_direct": True 
+        "return_direct": True,
+        "output_parser": SimpleOutputParser(),
     },
 )
 

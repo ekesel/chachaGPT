@@ -1,0 +1,119 @@
+/* ===== Global Reset & Base Styles ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-color: #f5f7fa;       /* very light slate-blue */
+    color: #2f3e46;                  /* dark slate-blue */
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+  
+  /* ===== Container & Heading ===== */
+  .container {
+    max-width: 600px;
+    width: 100%;
+  }
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #006d77;                  /* teal-ish */
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  .intro {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #3a5a6c;                  /* medium slate-blue */
+  }
+  
+  /* ===== Form Styles ===== */
+  .form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #94a3b8;       /* light slate-blue */
+    border-radius: 4px;
+    font-size: 1rem;
+    resize: vertical;
+    min-height: 4.5rem;
+    transition: border-color 0.2s;
+  }
+  textarea:focus {
+    outline: none;
+    border-color: #319795;           /* teal-600 */
+    box-shadow: 0 0 0 3px rgba(49, 151, 149, 0.2);
+  }
+  
+  button {
+    background-color: #319795;       /* teal-600 */
+    color: #ffffff;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  button:hover {
+    background-color: #2c7a7b;       /* slightly darker teal */
+  }
+  
+  /* ===== Spinner (HTMX Indicator) ===== */
+  .spinner {
+    display: none;
+    color: #319795;                  
+    font-weight: 500;
+  }
+  .htmx-request .spinner {
+    display: inline-block;
+  }
+  
+  /* ===== Response Container ===== */
+  #response {
+    width: 100%;
+  }
+  
+  /* ===== Snippet Card ===== */
+  .snippet-card {
+    background-color: #ffffff;
+    border: 1px solid #94a3b8;       /* light slate-blue border */
+    border-radius: 6px;
+    padding: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-top: 1rem;
+    animation: fade-in 0.4s ease-out both;
+  }
+  .snippet-card p {
+    color: #2f3e46;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* ===== Fade-In Animation ===== */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(0.5rem);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  

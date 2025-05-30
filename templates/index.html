@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ChachaGPT – India’s most paranoid AI uncle</title>
+
+  <!-- HTMX (for dynamic form submission) -->
+  <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+  
+  <!-- Link to external plain CSS -->
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to ChachaGPT</h1>
+
+    <p class="intro">
+      It’s India’s most paranoid <em>(and hilarious!)</em> AI uncle.
+      Give ChachaGPT a news headline or topic, and he’ll dive straight
+      into the “real truth” — complete with wild conspiracy theories,
+      questionable logic, and a solid dose of desi-style humor.
+      <br />
+      <strong>Powered by LangChain tools, gossip, and unlimited chai.</strong>
+    </p>
+
+    <!-- INPUT FORM -->
+    <form
+      class="form-container"
+      hx-post="/generate"
+      hx-target="#response"
+      hx-swap="innerHTML"
+    >
+      <textarea
+        name="prompt"
+        rows="3"
+        required
+        placeholder="Type a headline or topic..."
+      ></textarea>
+
+      <button type="submit">Spill the chai, Chacha!</button>
+
+      <!-- Spinner -->
+      <span class="spinner">☕ Brewing...</span>
+    </form>
+
+    <!-- Where the reply will appear -->
+    <div id="response"></div>
+  </div>
+</body>
+</html>

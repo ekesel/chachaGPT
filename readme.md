@@ -111,6 +111,12 @@ chachaGPT/
 this version is deployed freely to test. Dont overload it with prompts.
 https://inquisitive-gerti-ekesel-f56831e2.koyeb.app/
 
+### To Run with Docker
+
+docker build -t chachagpt:latest .
+docker run -d --name chachagpt_app -p 8000:8000 chachagpt:latest
+
+
 ### 🤝 Contributing
 
 Pull requests and suggestions are welcome!
